@@ -8,7 +8,8 @@ import {
   ObjectId,
   OptionalId,
 } from 'mongodb'
-import { config, logger } from 'server'
+
+import { config, logger } from '@/server'
 
 // TODO: refactor; 1 and 0 return types is not ok
 
@@ -20,7 +21,7 @@ export class Database {
   private items: Collection<Document>
 
   async connect(dbName = 'tsicava', collectionName: Collections = 'items') {
-    this.client = new MongoClient('mongodb+srv://' + config.mongodb.accessKey)
+    this.client = new MongoClient(config.mongodb.connectionString)
 
     await this.client.connect()
 

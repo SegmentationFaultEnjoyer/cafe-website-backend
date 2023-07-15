@@ -5,7 +5,7 @@ app:
   globalPrefix: "v1"
 
 mongodb:
-  accessKey: User:<password>address/?retryWrites=true&w=majority
+  accessKey: mongodb+srv://User:<password>address/?retryWrites=true&w=majority
 
 bot:
   accessToken: your-bot-token

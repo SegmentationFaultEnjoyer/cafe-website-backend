@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
-import { config, logger } from 'server'
 
 import { getErrorResponse, UnauthorizedError } from '@/helpers'
+import { config, logger } from '@/server'
 
 export function isAuthorized(req: Request, resp: Response, next: NextFunction) {
   try {

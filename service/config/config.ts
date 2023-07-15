@@ -16,7 +16,7 @@ export type Config = {
     globalPrefix: string
   }
   mongodb: {
-    accessKey: string
+    connectionString: string
   },
   auth: {
     secret: string

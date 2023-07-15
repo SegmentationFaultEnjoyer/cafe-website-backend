@@ -1,12 +1,12 @@
 import { createHmac } from 'crypto'
 import { Request, Response } from 'express'
 import { ObjectId } from 'mongodb'
-import { dataBase, logger } from 'server'
-import { config } from 'server'
 
 import { sendMessage } from '@/bot'
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse, NotFoundError } from '@/helpers'
+import { dataBase, logger } from '@/server'
+import { config } from '@/server'
 
 type WayForPayResponse = {
   merchantAccount: string

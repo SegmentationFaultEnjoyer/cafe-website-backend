@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
 import jwt from 'jsonwebtoken'
-import { config, dataBase, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { BadRequestError, getErrorResponse, isHashMatch, validateRequest } from '@/helpers'
 import { LoginRequest } from '@/requests'
+import { config, dataBase, logger } from '@/server'
 
 const cookieKey = 'token'
 

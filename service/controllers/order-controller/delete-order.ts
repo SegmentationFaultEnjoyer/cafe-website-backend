@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
-import { dataBase, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse, validateRequest } from '@/helpers'
 import { IdRequest } from '@/requests'
+import { dataBase, logger } from '@/server'
 
 // TODO: normal responses
 

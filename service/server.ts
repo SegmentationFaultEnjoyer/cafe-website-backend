@@ -1,6 +1,3 @@
-import 'module-alias/register'
-import 'reflect-metadata'
-
 import cookieParser from 'cookie-parser'
 import express from 'express'
 import http from 'http'
@@ -46,7 +43,7 @@ const handleShutDown = async (signal: NodeJS.Signals) => {
 
   // Force close server after n seconds
   setTimeout(() => {
-    logger.warning('Forcing server shutdown')
+    logger.warn('Forcing server shutdown')
 
     process.exit(1)
   }, MAX_SHUTDOWN_WAIT_TIME)
@@ -56,12 +53,10 @@ const handleShutDown = async (signal: NodeJS.Signals) => {
 process.on('SIGINT', handleShutDown)
 process.on('SIGTERM', handleShutDown)
 
-const run = async () => {
+export const run = async () => {
   await dataBase.connect()
 
   startBot()
 
   server.listen(PORT, HOST, () => logger.debug(URL))
 }
-
-run()

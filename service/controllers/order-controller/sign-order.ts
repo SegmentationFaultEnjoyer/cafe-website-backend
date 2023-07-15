@@ -1,10 +1,10 @@
 import { createHmac } from 'crypto'
 import { Request, Response } from 'express'
-import { config, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse, validateRequest } from '@/helpers'
 import { SignOrderRequest } from '@/requests'
+import { config, logger } from '@/server'
 
 export async function signOrder(req: Request, resp: Response) {
   try {

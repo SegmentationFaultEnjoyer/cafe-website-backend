@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
-import { dataBase, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse, validateRequest } from '@/helpers'
 import { CreateItemRequest } from '@/requests'
+import { dataBase, logger } from '@/server'
 
 export async function createItem(req: Request, resp: Response) {
   try {

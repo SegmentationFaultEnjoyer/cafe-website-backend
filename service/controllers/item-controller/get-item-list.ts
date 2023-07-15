@@ -1,8 +1,8 @@
 import { Request, Response } from 'express'
-import { dataBase, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse } from '@/helpers'
+import { dataBase, logger } from '@/server'
 
 export async function getItemsList(req: Request, res: Response) {
   try {

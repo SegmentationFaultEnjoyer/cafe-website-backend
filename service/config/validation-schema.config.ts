@@ -12,7 +12,7 @@ export const validationSchema = joi.object<Config>({
     globalPrefix: joi.string().default('v1'),
   },
   mongodb: {
-    accessKey: joi.string().required(),
+    connectionString: joi.string().required(),
   },
   auth: {
     secret: joi.string().required(),

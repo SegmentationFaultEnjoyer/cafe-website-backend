@@ -1,9 +1,9 @@
 import { Request, Response } from 'express'
-import { dataBase, logger } from 'server'
 
 import { HTTP_STATUS_CODES } from '@/enums'
 import { getErrorResponse, validateRequest } from '@/helpers'
 import { CreateOrderRequest } from '@/requests'
+import { dataBase, logger } from '@/server'
 
 const MONTH = 30 * 24 * 60 * 60 * 1000
 
