@@ -1,0 +1,5 @@
+- normal responses
+- handle images
+- store data about cafe in db and make it editable
+- payment works weird
+- refactor db

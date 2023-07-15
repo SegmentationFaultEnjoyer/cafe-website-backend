@@ -1,0 +1,22 @@
+app:
+  name: "cafe-backend"
+  host: localhost
+  port: 3000
+  globalPrefix: "v1"
+
+mongodb:
+  accessKey: User:<password>address/?retryWrites=true&w=majority
+
+bot:
+  accessToken: your-bot-token
+  start: false
+
+wayforpay:
+  secret: you-secret
+
+auth:
+  secret: secret
+
+log:
+  level: "debug"
+  inJson: true
